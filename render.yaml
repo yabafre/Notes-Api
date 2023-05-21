@@ -37,6 +37,6 @@ databases:
     engine: postgres
     version: "15"
     username: root
-    password:
+    password: 3ay7S2jdaIhoKZJc0QmGw0Iqv93fsSx4
     port: 5432
-    database:
+    database: laravel_j1tu
