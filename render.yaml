@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: laravel-notes-app
+    env: docker
+    buildCommand: "docker build -t laravel-notes-app ."
+    startCommand: "docker run -p 8080:80 --log-driver json-file laravel-notes-app"
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        value: base64:xL42zCmPgIDK69zKZyCOKsqCbVDqgpqp6Z+dhmqpZPs=
+      - key: APP_DEBUG
+        value: "true"
+      - key: APP_URL
+        value:
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        value:
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        value:
+      - key: DB_USERNAME
+        value: root
+      - key: DB_PASSWORD
+        value:
+      - key: LOG_CHANNEL
+        value: stack
+      - key: LOG_LEVEL
+        value: debug
+      - key: LOG_DEPRECATIONS_CHANNEL
+        value: null
+
+databases:
+  - name: laravel
+    engine: postgres
+    version: "15"
+    username: root
+    password:
+    port: 5432
+    database:
