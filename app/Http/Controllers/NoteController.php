@@ -28,7 +28,7 @@ class NoteController extends Controller
         }
 
         $note = new Note;
-        $note->content = $request->content;
+        $note->content = $request->input('content');
         $note->user_id = $request->user()->id;
         $note->save();
 
